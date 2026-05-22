@@ -1,5 +1,5 @@
 ---
-name: ralph-tdd
+name: tdd
 description: Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions "red-green-refactor", wants integration tests, or asks for test-first development.
 ---
 
@@ -43,6 +43,8 @@ RIGHT (vertical):
 ## Workflow
 
 ### 1. Planning
+
+When exploring the codebase, use the project's domain glossary so that test names and interface vocabulary match the project's language, and respect ADRs in the area you're touching.
 
 Before writing any code:
 
