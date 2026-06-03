@@ -4,7 +4,8 @@ set -e
 trap 'echo "Interrupted, exiting."; exit 130' INT
 
 RALPH_DIR="$(cd "$(dirname "$0")" && pwd)"
-SANDBOX_NAME="ralph"
+REPO_ROOT="$(cd "$RALPH_DIR/.." && pwd)"
+SANDBOX_NAME="${SANDBOX_NAME:-ralph-$(basename "$REPO_ROOT")}"
 ITERATIONS=${1:-50}
 
 for ((i=1; i<=$ITERATIONS; i++)); do
